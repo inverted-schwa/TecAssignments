@@ -1,0 +1,30 @@
+Problem Statement: Magic of Books is a Book store which deals with book. All the inventory of the 
+store is been managed manually. but now as store is expending its becoming difficult to manage it 
+manually. Books store wants to have a book management system with following features.
+User Stories –
+1. As an User, I should be able to enter into the application using my user name
+2. As an User, My user name should be checked and verified
+3. As an User, if valid I should be able to see all my books (new, Favourite or completed)
+4. As an User, I should be able to select any book by entering book Id.
+5. As an User, I should be able to get book details like Author name and description.
+Instructions –
+1. The User class should have following Attributes: - 
+a userName 
+b user Id 
+c email id
+d password 
+e newBooks(typebook) 
+f favourite(type Book) 
+g Completed(type Book)
+The book class should have following attributes: -
+BookName
+Author name
+Description
+book Id
+2. Use Arrays to store books objects in key value pair where key is book 
+Id and value is Book object
+4. Create book and User as a pojo.
+5. Create MagicOfBooks class to define all the functionality related methods. 
+6. Use recursive menu to display all the options and inputs
+6. Zero marks will be awarded if the code throws compile time error. Partial marking will be done only 
+if the code has no compile time error.f
