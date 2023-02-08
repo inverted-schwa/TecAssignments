@@ -27,4 +27,4 @@ Id and value is Book object
 5. Create MagicOfBooks class to define all the functionality related methods. 
 6. Use recursive menu to display all the options and inputs
 6. Zero marks will be awarded if the code throws compile time error. Partial marking will be done only 
-if the code has no compile time error.f
+if the code has no compile time error.
