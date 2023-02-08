@@ -12,6 +12,7 @@ public class User {
 	{
 		this.userName = uname;
 		this.userID=uID;
+		this.email=email;
 		this.password=password;
 		this.newBooks = newBooks;
 		this.favorite=favorite;
