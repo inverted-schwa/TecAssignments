@@ -28,11 +28,13 @@ public class EmployeeService {
 			edao.insert(e);
 		}
 	}
+	
 	public void deleteData() {
 		System.out.println("Enter employee id you want to delete");
 		int empID=sc.nextInt();
 		edao.delete(empID);
 	}
+	
 	public void updateData() {
 		System.out.println("Enter employee id you want to update");
 		int empID=sc.nextInt();
@@ -40,8 +42,10 @@ public class EmployeeService {
 		String empName= sc.next();
 		edao.update(empID, empName);
 	}
+	
 	public void show()
 	{
 		edao.display();
 	}
+	
 }
