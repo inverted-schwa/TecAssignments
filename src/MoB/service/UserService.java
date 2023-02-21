@@ -6,12 +6,10 @@ import MoB.dao.UserDao;
 
 public class UserService {
 	private Scanner sc;
-	private UserDao udao;
-
+	public UserDao udao;
 	
 	public UserService()
 	{
-		sc=new Scanner(System.in);
 		udao=new UserDao();
 	}
 	
@@ -21,5 +19,15 @@ public class UserService {
 	
 	public boolean checkLogin(String uname, String pass) {
 		return udao.checkLogin(uname, pass);
+		//System.out.println("The user logged in is "+udao.login.userName+" with password "+udao.login.password);
+	}
+	
+	public void viewFavorites() {
+		udao=new UserDao();
+		udao.viewFavorites();
+	}
+	public void viewNew() {
+		udao=new UserDao();
+		udao.viewNew();
 	}
 }

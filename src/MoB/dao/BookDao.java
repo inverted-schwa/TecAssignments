@@ -8,7 +8,7 @@ import MoB.pojo.*;
 public class BookDao {
 	public List<Book> booklist;
 	public List<User> userList;
-	public void BookDao() {
+	public BookDao() {
 	booklist = new LinkedList<Book>();
 	Book b1 = new Book("Bible", "God", "It's the bible!", 1);
 	booklist.add(b1);
@@ -55,5 +55,15 @@ public class BookDao {
 		userList.add(u2);
 		userList.add(u3);
 		userList.add(u4);
+	}
+	
+	public void getBookDesc(int selection) {
+		if((selection>=0)&&(selection<booklist.size())) {
+			Book b = booklist.get(selection);
+			System.out.println(b.bookName+" by "+b.authorName);
+			System.out.println("-------------------------");
+			System.out.println(b.description);
+			System.out.println("-------------------------");
+		}
 	}
 }
