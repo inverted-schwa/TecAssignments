@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 import MoB.app.AppMain;
 import MoB.service.*;
-import magicOfBooks.Book;
-import magicOfBooks.User;
 
 public class AppMain {
 	BookService bserv = new BookService();
@@ -13,6 +11,7 @@ public class AppMain {
 
 	Scanner sc;
 	boolean loggedin=false;
+	
 	public static void main(String[]args)
 	{
 		AppMain am = new AppMain();
@@ -36,29 +35,30 @@ public class AppMain {
 		int option=1;
 		while(option!=5) {
 			System.out.println("Enter your selection ");
-			System.out.println("1. Insert");
-			System.out.println("2. Delete");
-			System.out.println("3. Update");
-			System.out.println("4. View");
-			System.out.println("5. Exit");
+			System.out.println("1. View Book List");
+			System.out.println("2. Add a book");
+			System.out.println("3. View my favorites");
+			System.out.println("4. View my new books");
+			System.out.println("5. Log Out");
 			option = sc.nextInt();
 			switch(option)
 			{
 			case 1:
-				bserv.insertData();
+				bserv.viewBookList();
 				break;
 			case 2:
-				bserv.deleteData();
+				bserv.addBook();
 				break;
 			case 3:
-				bserv.updateData();
+				bserv.viewFavorites();
 				break;
 			case 4:
-				bserv.show();
+				bserv.viewNew();
 				break;
 			case 5:
-				System.exit(0);
-				System.out.println("Exiting");
+				loggedin=false;
+				userv.logout();
+				login();
 			}
 		}
 	}

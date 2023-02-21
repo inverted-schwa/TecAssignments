@@ -1,16 +1,17 @@
 package MoB.pojo;
 
 import MoB.pojo.*;
+import java.util.*;
 
 public class User {
 	public String userName;
 	public int userID;
 	public String email;
 	public String password;
-	public Book[] newBooks;
+	public List<Book> newBooks;
 	public Book favorite;
-	public Book[] completed;
-	public User(String uname, int uID, String email, String password, Book[] newBooks, Book favorite, Book[] completed)
+	public List<Book> completed;
+	public User(String uname, int uID, String email, String password, List<Book> newBooks, Book favorite, List<Book> completed)
 	{
 		this.userName = uname;
 		this.userID=uID;
@@ -45,10 +46,10 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public Book[] getNewBooks() {
+	public List<Book> getNewBooks() {
 		return newBooks;
 	}
-	public void setNewBooks(Book[] newBooks) {
+	public void setNewBooks(List<Book> newBooks) {
 		this.newBooks = newBooks;
 	}
 	public Book getFavorite() {
@@ -57,10 +58,10 @@ public class User {
 	public void setFavorite(Book favorite) {
 		this.favorite = favorite;
 	}
-	public Book[] getCompleted() {
+	public List<Book> getCompleted() {
 		return completed;
 	}
-	public void setCompleted(Book[] completed) {
+	public void setCompleted(List<Book> completed) {
 		this.completed = completed;
 	}
 	public void listBooks(Book[] books) {

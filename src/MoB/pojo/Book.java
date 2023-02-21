@@ -1,6 +1,9 @@
 package MoB.pojo;
 
 public class Book {
+	
+	public Book() {
+	}
 	public Book(String name, String author, String desc, int bookID) {
 		this.authorName=author;
 		this.bookName=name;
