@@ -32,6 +32,12 @@ public class UserDao {
 		System.out.println(login.getNewBooks());
 	}
 	
+	public void viewUsers() {
+		for(User u:bd.userList) {
+			System.out.println(u.userID+" "+u.userName+" "+u.password+" "+u.getEmail()+" "+u.hashCode());
+		}
+	}
+	
 	public void logout() {
 		login = null;
 		System.out.println("You are now logged out. The current user is "+login);

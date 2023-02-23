@@ -30,4 +30,8 @@ public class UserService {
 		udao=new UserDao();
 		udao.viewNew();
 	}
+	
+	public void viewUsers() {
+		udao.viewUsers();
+	}
 }

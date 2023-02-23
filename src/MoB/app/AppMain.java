@@ -43,7 +43,8 @@ public class AppMain {
 			System.out.println("3. Add a book");
 			System.out.println("4. View my favorites");
 			System.out.println("5. View my new books");
-			System.out.println("6. Log Out");
+			System.out.println("6. View all user details");
+			System.out.println("7. Log Out");
 			option = sc.nextInt();
 			switch(option)
 			{
@@ -63,6 +64,9 @@ public class AppMain {
 				userv.viewNew();
 				break;
 			case 6:
+				userv.viewUsers();
+				break;
+			case 7:
 				loggedin=false;
 				userv.logout();
 				login();
