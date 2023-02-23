@@ -1,11 +1,43 @@
 package MoB.dao;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.LinkedList;
 import java.util.List;
 
 import MoB.pojo.*;
+import MoB.DataConnect.DataConnect;
 
 public class BookDao {
+	private Connection con;
+	private PreparedStatement stat;
+	public BookDao()
+	{
+		con=DataConnect.getConnect();
+	}
+	public void insertData(User u1) 
+	{
+		try
+		{
+		stat=con.prepareStatement("insert into User values(?,?,?)");
+		stat.setInt(1, s1.getStudentcode());
+		stat.setString(2, s1.getStudentname());
+		stat.setInt(3,  s1.getScore());
+		int result=stat.executeUpdate();
+		if(result>0)
+		{
+			System.out.println("Data Inserted");
+		}
+		else
+		{
+			System.out.println("Not inserted");
+		}
+		}catch(Exception ex)
+		{
+			ex.getMessage();
+		}
+	}
+	/*
 	public List<Book> booklist;
 	public List<User> userList;
 	public BookDao() {
@@ -55,6 +87,7 @@ public class BookDao {
 		userList.add(u2);
 		userList.add(u3);
 		userList.add(u4);
+		
 	}
 	
 	public void getBookDesc(int selection) {
@@ -66,4 +99,5 @@ public class BookDao {
 			System.out.println("-------------------------");
 		}
 	}
+	*/
 }
